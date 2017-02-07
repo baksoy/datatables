@@ -23,33 +23,63 @@ $(document).ready(function () {
     //     ]
     // });
 
-
     // 3) Add the following buttons:
-    // Copy all rows to clipboard, Export to Excel, Export to CSV, Printable View, and Export to Pdf
+    // - Show 10, 25, 50, 100, All rows
+    // - Copy rows to clipboard
+    // - Export to Excel
+    // - Export to CSV
+    // - Printable view
+    // - Export to PDF
+    // - Set column visibility
     var table = $('#maintable').DataTable({
         mark: true,
         dom: 'Bfrtip',
+        lengthMenu: [
+            [10, 25, 50, 100, -1],
+            ['10 rows', '25 rows', '50 rows', '100 rows', 'Show All']
+        ],
         buttons: [
-            'copyHtml5',
-            'excelHtml5',
-            'csvHtml5',
-            'print',
+            'pageLength',
+            {
+                extend: 'copyHtml5',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            {
+                extend: 'excelHtml5',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            {
+                extend: 'csvHtml5',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            {
+                extend: 'print',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
             {
                 extend: 'pdfHtml5',
-                download: 'open'
-            }
-        ]
+                download: 'open',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            'colvis'
+        ],
+        columDefs: [{
+            targets: -1,
+            visible: false
+        }]
     });
 
-    // 4) Toggle Column Visibility.
-    $('button.toggle-vis').on('click', function (e) {
-        e.preventDefault();
-        var column = table.column($(this).attr('data-column'));
-        column.visible(!column.visible());
-    });
-
-
-    // 5) Search on Multiple Columns
+    // 4) Search on Multiple Columns
     $('#maintable tfoot th').each(function () {
         var title = $('#maintable tfoot th').eq($(this).index()).text();
         $(this).html('<input type="text" placeholder="Search ' + title + '" />');

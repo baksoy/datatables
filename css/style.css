@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Glyphicons Halflings";
+    src: url("../fonts/glyphicons-halflings-regular.woff2");
+}
+
+.container {
+    margin-top: 20px;
+}
+
+thead {
+    background-color: rgba(244, 67, 54, 0.85);
+    color: #fff;
+}
+
+mark {
+    background-color: #f4f57a;
+    padding: 0;
+}
+
+button.dt-button, div.dt-button, a.dt-button {
+    padding: 0.3em 0.3em;
+}

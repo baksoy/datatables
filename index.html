@@ -2,39 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/buttons.dataTables.min.css">
-    <style>
-        @font-face {
-            font-family: "Glyphicons Halflings";
-            src: url("fonts/glyphicons-halflings-regular.woff2");
-        }
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        thead {
-            background-color: rgba(244, 67, 54, 0.85);
-            color: #fff;
-        }
-
-        mark {
-            background-color: #f4f57a;
-            padding: 0;
-        }
-    </style>
-    <title>Datatables Example</title>
+    <title>Beautiful Tables</title>
 </head>
 
-<body class="container" style="margin-top: 10px">
-<div class="text-center">
-    Toggle Column Visibility:
-    <button type="button" class="btn btn-sm btn-default toggle-vis" data-column="0" href="#">Name</button>
-    <button type="button" class="btn btn-sm btn-default toggle-vis" data-column="1" href="#">Position</button>
-    <button type="button" class="btn btn-sm btn-default toggle-vis" data-column="2" href="#">City</button>
-    <button type="button" class="btn btn-sm btn-default toggle-vis" data-column="3" href="#">Age</button>
-    <button type="button" class="btn btn-sm btn-default toggle-vis" data-column="4" href="#">Start Date</button>
-    <button type="button" class="btn btn-sm btn-default toggle-vis" data-column="5" href="#">Salary</button>
-</div>
+<body class="container">
+<h1 class="text-center">Sample DataTables Project</h1>
+
 <table id="maintable" class="display compact cell-border" cellspacing="0" width="100%">
     <thead>
     <tr>
@@ -4080,5 +4060,8 @@
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/jquery.mark.min.js"></script>
 <script type="text/javascript" src="js/datatables.mark.js"></script>
+<script type="text/javascript" src="js/buttons.colVis.min.js"></script>
+<footer>For documentation and licensing visit <a href="https://datatables.net/">DataTables</a></footer>
 </body>
+
 </html>
