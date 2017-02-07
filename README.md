@@ -15,5 +15,9 @@ Features:
 - Search highlighting with mark.js
 
 ![alt datatables](datatables.js.gif)
+Demonstrating search on multiple columns
+
+![alt datatables](datatables2.js.gif)
+Demonstrating exporting to Pdf after filtering with a search
 
 Download it and mofiy it to your heart's content!
