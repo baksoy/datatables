@@ -2,6 +2,8 @@ DataTables Sample Project
 ====
 A sample project that demonstrates [Datatables](https://datatables.net), which is a plug-in for jQuery. It is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table.
 
+See a [ working demo](https://baksoy.github.io/datatables/)
+
 Features:
 - HTML Table with Pagination
 - Hide specific columns (use when you want to show a different view)
